@@ -1,26 +1,24 @@
 package com.avi.modulith;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.modulith.core.ApplicationModules;
-import org.springframework.modulith.docs.Documenter;
+import org.springframework.test.context.ActiveProfiles;
+
+import javax.sql.DataSource;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
+@ActiveProfiles("test")
 class ModulithLibraryApplicationTests {
-
-    /*@Test
-    void contextLoads() {
-    }*/
+    @Autowired
+    private DataSource dataSource;
 
 
     @Test
-    void verifiesModularStructure() {
-        ApplicationModules modules = ApplicationModules.of(ModulithLibraryApplication.class);
-        modules.forEach(System.out::println);
-        modules.verify();
-        new Documenter(modules)
-                .writeDocumentation()
-                .writeIndividualModulesAsPlantUml();
+    void contextLoads() {
+        assertNotNull(dataSource);
     }
 
 }

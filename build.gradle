@@ -34,6 +34,7 @@ dependencies {
 	implementation 'org.springframework.modulith:spring-modulith-starter-jpa'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'org.postgresql:postgresql'
+    testRuntimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.modulith:spring-modulith-starter-test'
