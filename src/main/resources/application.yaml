@@ -1,16 +1,13 @@
 spring:
-  sql:
-    init:
-      mode: ALWAYS
   datasource:
-    url: jdbc:postgresql://127.0.0.1:5432/libarydb2
+    url: jdbc:postgresql://127.0.0.1:5432/libarydb
     username: postgres
     password: secret
   jpa:
-    defer-datasource-initialization: true
     generate-ddl: true
     open-in-view: false
+    show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: 'create-drop'
 
 

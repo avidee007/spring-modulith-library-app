@@ -15,9 +15,15 @@ class ModularityTests {
     }
 
     @Test
-    void createModuleDocumentation() {
+    void createModuleDocumentationInUML() {
         new Documenter(modules)
                 .writeDocumentation()
                 .writeModulesAsPlantUml(Documenter.DiagramOptions.defaults().withStyle(Documenter.DiagramOptions.DiagramStyle.UML));
+    }
+
+    @Test
+    void createModuleDocumentationInC4() {
+        new Documenter(modules)
+                .writeDocumentation();
     }
 }
