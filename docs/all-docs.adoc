@@ -1,0 +1,19 @@
+== Modulith Library Application
+plantuml::components.puml[,,format=svg]
+
+== Events
+plantuml::module-events.puml[,,format=svg]
+include::module-events.adoc[]
+
+== Inventory
+plantuml::module-inventory.puml[,,format=svg]
+include::module-inventory.adoc[]
+
+== Notification
+plantuml::module-notification.puml[,,format=svg]
+include::module-notification.adoc[]
+
+== Rental
+plantuml::module-rental.puml[,,format=svg]
+include::module-rental.adoc[]
+

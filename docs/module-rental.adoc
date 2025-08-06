@@ -1,0 +1,9 @@
+[%autowidth.stretch, cols="h,a"]
+|===
+|Base package
+|`com.avi.modulith.rental`
+|Spring components
+|_Controllers_
+
+* `c.a.m.r.RentalController`
+|===

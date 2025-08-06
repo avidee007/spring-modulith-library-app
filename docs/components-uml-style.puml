@@ -1,0 +1,53 @@
+@startuml
+set separator none
+
+top to bottom direction
+
+skinparam {
+  arrowFontSize 10
+  defaultTextAlignment center
+  wrapWidth 200
+  maxMessageSize 100
+  componentStyle uml1
+}
+
+hide stereotype
+
+skinparam component<<ModulithLibraryApplication.ModulithLibraryApplication.Events>> {
+  BackgroundColor #dddddd
+  FontColor #000000
+  BorderColor #9a9a9a
+  shadowing false
+}
+skinparam component<<ModulithLibraryApplication.ModulithLibraryApplication.Inventory>> {
+  BackgroundColor #dddddd
+  FontColor #000000
+  BorderColor #9a9a9a
+  shadowing false
+}
+skinparam component<<ModulithLibraryApplication.ModulithLibraryApplication.Notification>> {
+  BackgroundColor #dddddd
+  FontColor #000000
+  BorderColor #9a9a9a
+  shadowing false
+}
+skinparam component<<ModulithLibraryApplication.ModulithLibraryApplication.Rental>> {
+  BackgroundColor #dddddd
+  FontColor #000000
+  BorderColor #9a9a9a
+  shadowing false
+}
+skinparam rectangle<<ModulithLibraryApplication.ModulithLibraryApplication>> {
+  BorderColor #9a9a9a
+  FontColor #9a9a9a
+  shadowing false
+}
+
+component "==Events\n<size:10>[Component: Module]</size>" <<ModulithLibraryApplication.ModulithLibraryApplication.Events>> as ModulithLibraryApplication.ModulithLibraryApplication.Events
+component "==Inventory\n<size:10>[Component: Module]</size>" <<ModulithLibraryApplication.ModulithLibraryApplication.Inventory>> as ModulithLibraryApplication.ModulithLibraryApplication.Inventory
+component "==Notification\n<size:10>[Component: Module]</size>" <<ModulithLibraryApplication.ModulithLibraryApplication.Notification>> as ModulithLibraryApplication.ModulithLibraryApplication.Notification
+component "==Rental\n<size:10>[Component: Module]</size>" <<ModulithLibraryApplication.ModulithLibraryApplication.Rental>> as ModulithLibraryApplication.ModulithLibraryApplication.Rental
+ModulithLibraryApplication.ModulithLibraryApplication.Rental .[#707070,thickness=2].> ModulithLibraryApplication.ModulithLibraryApplication.Events : "<color:#707070>depends on"
+ModulithLibraryApplication.ModulithLibraryApplication.Notification .[#707070,thickness=2].> ModulithLibraryApplication.ModulithLibraryApplication.Events : "<color:#707070>listens to"
+ModulithLibraryApplication.ModulithLibraryApplication.Inventory .[#707070,thickness=2].> ModulithLibraryApplication.ModulithLibraryApplication.Events : "<color:#707070>listens to"
+@enduml

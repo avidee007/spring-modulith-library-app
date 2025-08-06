@@ -1,0 +1,12 @@
+[%autowidth.stretch, cols="h,a"]
+|===
+|Base package
+|`com.avi.modulith.inventory`
+|Spring components
+|_Services_
+
+* `c.a.m.i.BookInventoryService`
+|Events listened to
+|* `c.a.m.e.RentalEvent` (async) 
+* `c.a.m.e.ReturnEvent` (async) 
+|===

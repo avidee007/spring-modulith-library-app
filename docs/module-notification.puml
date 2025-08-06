@@ -1,0 +1,19 @@
+@startuml
+set separator none
+title Notification
+
+top to bottom direction
+
+!include <C4/C4>
+!include <C4/C4_Context>
+!include <C4/C4_Component>
+
+Container_Boundary("ModulithLibraryApplication.ModulithLibraryApplication_boundary", "Application", $tags="") {
+  Component(ModulithLibraryApplication.ModulithLibraryApplication.Events, "Events", $techn="Module", $descr="", $tags="", $link="")
+  Component(ModulithLibraryApplication.ModulithLibraryApplication.Notification, "Notification", $techn="Module", $descr="", $tags="", $link="")
+}
+
+Rel(ModulithLibraryApplication.ModulithLibraryApplication.Notification, ModulithLibraryApplication.ModulithLibraryApplication.Events, "listens to", $techn="", $tags="", $link="")
+
+SHOW_LEGEND(true)
+@enduml
