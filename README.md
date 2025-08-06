@@ -10,6 +10,8 @@ Domains: **Rental**, **Inventory**, **Notifications**
 
 This repository contains a **sample Library Management System** built with **Spring Modulith**. It demonstrates how to structure a Spring Boot application into **modular components** with **clearly defined context boundaries**, adhering to **Domain-Driven Design (DDD)** principles.
 
+![components.svg](docs/components.svg)
+
 ## Key characteristics of this architecture:
 
 - **Modular Design** – Each module encapsulates its own domain logic and data.
@@ -24,7 +26,7 @@ This repository contains a **sample Library Management System** built with **Spr
 - **Modular Monolith Architecture**: Encapsulate functional domains into modules (rental, inventory, notifications), improving maintainability and clarity.
 - **Structural Verification**: Enforce module boundaries using `ApplicationModules.of(...).verify()` in tests, preventing illegal package dependencies.
 - **Event‑Driven Communication**: Modules interact via domain events instead of direct service injection, leading to loose coupling and high cohesion.
-- **Self‑Documenting Modules**: Automatically generate module documentation diagrams and artifacts via Spring Modulith tooling.
+- **Self‑Documenting Modules**: Automatically generate module documentation diagrams and artifacts via Spring Modulith tooling. [module-docs](docs)
 
 ---
 
@@ -32,6 +34,7 @@ This repository contains a **sample Library Management System** built with **Spr
 
 1. **Rental API Call**
     - `POST /api/rentals/rent` → RentalService persists rental and publishes `RentalEvent`.
+   
     - `POST /api/rentals/return` → RentalService updates rental with return date time and publishes `ReturnEvent`.
 
 2. **Inventory Listener**
@@ -59,3 +62,4 @@ This repository contains a **sample Library Management System** built with **Spr
 3. **Independent Testing** – Modules can be tested individually using @ApplicationModuleTests.
 
 4. **Microservice Migration Ready** – Event-driven design simplifies extraction into microservices if needed.
+
