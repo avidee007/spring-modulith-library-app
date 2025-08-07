@@ -63,3 +63,33 @@ This repository contains a **sample Library Management System** built with **Spr
 
 4. **Microservice Migration Ready** – Event-driven design simplifies extraction into microservices if needed.
 
+## 🧪 Getting Started
+
+### Prerequisites
+
+- Java 17+
+- Gradle (wrapper included) or Maven
+- Postgres Database
+
+### Clone & Run
+
+```
+git clone https://github.com/avidee007/spring-modulith-library-app.git
+cd spring-modulith-library-app 
+```
+#### Build application
+
+```bash
+  ./gradlew build
+```
+
+#### Run application
+```bash
+  ./gradlew bootRun
+```
+
+#### Run tests
+```bash
+  ./gradlew test
+```
+
